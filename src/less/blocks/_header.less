@@ -27,7 +27,10 @@ header.header.header-slim{
 		margin-top: 0;
 	}
 	.header-logo {
-		width: 200px;
+		@media(min-width:1200px){
+			width: 235px;
+		}
+		
 		img{height: 60px;}
 		
 	}
@@ -41,7 +44,10 @@ header.header.header-slim{
 }
 .header-logo{
 	
-	width: 200px;
+	@media(min-width:1200px){
+		width: 235px;
+	}
+	
 	margin-right: 65px;
 	flex-shrink: 0;
 	img{
@@ -310,10 +316,16 @@ ul.header-menu + .account-block{
 	transition: .2s;
 	z-index: 2;
 	background-color: #fff;
-	input{width: 100%;}
+	input{
+		width: 100%;
+		&::placeholder{
+			font-size: 14px;
+			color: #c4c4c4;
+		}
+	}
 }
 .search-form-item.active{
-	width: 300px;
+	width: 130px;
 	border-bottom: 1px solid @second;
 }
 /*===========end search block ==========*/
