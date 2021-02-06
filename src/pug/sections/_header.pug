@@ -1,0 +1,66 @@
+header.header.header.header-1
+	.container 
+		.header-content
+			.header-logo
+				img(src="img/logo.png",  alt="logo")
+			.header-nav 
+				.header-row
+					// тестовый блок вариант 1
+					.header-info.header-info-1
+						p.info-text СР, ЧТ, ВС с 15:00 - 00:00; ПТ, СБ с 15:00 - 02:00; ПН, ВТ - выходные дни
+					.header-contacts
+						+social-icons
+						.contacts-phone
+							a(href="#!") +7(927) 777-77-77
+					.mobile-user-icons
+						.account-block
+							.account-icon
+								.logout-btn
+									+logout
+							.account-icon
+								.login-btn
+									.user-avatar
+										span
+										a(href="#" style="background-image: url(img/avatar.jpg) ")
+							.account-icon
+								.user-basket
+									+cart-icon
+									span.basket-value 2
+							.menu-toggle#menu-toggle
+								span
+				.header-row
+					ul.header-menu
+						li.active
+							a(href="#!") Главная
+						li.nav-submenu
+							a(href="#!") Главная
+							ul.submenu-list 
+								li 
+									a(href="#!") Подменю
+								li 
+									a(href="#!") Подменю
+								li 
+									a(href="#!") Подменю
+								li 
+									a(href="#!") Подменю
+						li
+							a(href="#!") Главная
+						li
+							a(href="#!") Главная
+						li
+							a(href="#!") Главная
+					.desktop-user-icons
+						.account-block
+							.account-icon
+								.logout-btn
+									+logout
+							.account-icon
+								.login-btn
+									.user-avatar
+										span
+										a(href="#" style="background-image: url(img/avatar.jpg) ")
+							.account-icon
+								.user-basket
+									+cart-icon
+									span.basket-value 2
+							

@@ -1,0 +1,44 @@
+/*******ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ HEADER-2*******/ 
+.header.header-2  .header-row +.header-row{
+	margin-top: 24px;
+}
+@media(max-width:1199px){
+	.header-info.header-info-2{display: none;}
+}
+
+.header-info-2{
+	display: flex;
+	.header-info__item{
+		display: flex;
+		p+p{
+			margin-left: 5px;
+		}
+	}
+	.header-info__item.item-place{
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.5;
+		p +p {
+			color: @accent;
+		}
+	}
+	.header-info__item.item-time{
+		font-size: 12px;
+		line-height: 19px;
+		.info-title{font-weight: 700;}
+	}
+	.header-info__column +.header-info__column{
+		margin-left: 80px;
+	}
+	.item-ship {
+		font-weight: 700;
+		margin-right: 5px;
+	}
+	.item-shipTime{
+		font-size: 12px;
+		line-height: 19px;
+		color: @second;
+	}
+}
+
+/******* end header 2*******/ 

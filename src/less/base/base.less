@@ -1,0 +1,73 @@
+/*================= БАЗОВЫЕ СТИЛИ ДЛЯ ВСЕГО ПРОЕКТА ==============*/
+*{box-sizing: border-box;}
+html{scroll-behavior: smooth;}
+html, body{
+	margin: 0;
+	padding: 0;
+	color: @textColor;
+	font-family: @ffMain;
+	font-size: 16px;
+	background-color:@bodyBg;
+	-webkit-font-smoothing: antialiased;
+	height: 2000px;
+}
+body.noscroll{
+	overflow: hidden;
+}
+a,a:hover {text-decoration: none;}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+h1, h2, h3, h4,h5,h6, p {
+	padding: 0;
+	margin: 0;
+}
+
+img, svg{
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+input, button{
+	outline: none;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+}
+button{
+	cursor: pointer;
+	font-family: inherit;
+	&:focus{outline: none;}
+}
+
+input[type="radio"], input[type='checkbox'], input[type="submit"]{
+	appearance: none;
+    -moz-appearance: none;
+-webkit-appearance: none;
+}
+.container{
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+/********SOCIAL ICONS ***********/
+.social-icons{
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	a{
+		display: flex;
+		align-items: center;
+	}
+	a +a {
+		margin-left: 10px;
+	}
+}
+/******** END SOCIAL ICONS ***********/
+/*=================  КОНЕЦ БАЗОВЫЕ СТИЛИ ДЛЯ ВСЕГО ПРОЕКТА ==============*/
