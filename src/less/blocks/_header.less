@@ -130,7 +130,28 @@ ul.header-menu {
 		color: @primary;
 	}
 }
-
+/****mobile-menu*****/
+.mobile-menu{
+	
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	max-width:325px;
+	z-index: 10;
+	background-color: @primary;
+	transform: translateX(-100%);
+	transition: 5s;
+	padding: 10px;
+}
+.mobile-menu-list{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.mobile-menu.active{
+	transform: translateX(0);
+}
 /******submenu******/
 ul.header-menu .submenu-list {
 	position: absolute;
@@ -342,6 +363,7 @@ ul.header-menu + .account-block{
 		img{height: 70px;}
 		
 	}
+	
 	.header .header-row{
 		justify-content: flex-end;
 	}
