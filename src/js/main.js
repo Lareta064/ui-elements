@@ -1,31 +1,32 @@
 $(document).ready(function() {
 
 	/*===== HEADER GAMBURGER===========*/
-	const menuToggle = document.querySelector('#menu-toggle');
-	// const mobMenu = document.querySelector('.nav-menu');
+	const menuToggle = document.querySelectorAll('.menu-toggle');
+	const mobMenu = document.querySelector('#mobile-menu');
 	const bodyEl = document.body;
 
 	if (menuToggle) {
-		menuToggle.addEventListener('click', function () {
-			if (this.classList.contains('active')) {
-				this.classList.remove('active');
-				// fixMenu.classList.remove('active');
+		for(let item of menuToggle){
+			item.addEventListener('click', function () {
+				if (this.classList.contains('active')) {
+					this.classList.remove('active');
+					mobMenu.classList.remove('active');
+					bodyEl.classList.remove('noscroll');
+
+				} else {
+					this.classList.add('active');
+					mobMenu.classList.add('active');
+					bodyEl.classList.add('noscroll');
+
+				}
+			});
+			window.addEventListener('resize', function () {
+				item.classList.remove('active');
 				bodyEl.classList.remove('noscroll');
-
-			} else {
-				this.classList.add('active');
-				// fixMenu.classList.add('active');
-				bodyEl.classList.add('noscroll');
-
-			}
-		});
-		window.addEventListener('resize', function () {
-			menuToggle.classList.remove('active');
-			bodyEl.classList.remove('noscroll');
-			// fixMenu.classList.remove('active');
-		});
+				// fixMenu.classList.remove('active');
+			});
+		}
 	}
-
 	/*====== Показать строку поиска в шапке======*/
 	
 	const searchBtn = document.getElementsByClassName('header-search-btn');
