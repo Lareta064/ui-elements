@@ -163,6 +163,11 @@ ul.header-menu {
 		line-height: 22px;
 		a{color: @mobMenuItem;}
 	}
+	li.active{
+		a{color: @accent;
+		border-bottom: 1px solid @accent;
+		}
+	}
 	&> ul li +li {
 		margin-top: 30px;
 	}
@@ -354,33 +359,6 @@ ul.header-menu + .account-block{
 	}
 }
 /*===========END GAMBURGER ============*/
-
-/*===========search block ============*/
-.search-form{
-	position: relative;
-}
-.search-form-item{
-	position: absolute;
-	right: 30px;
-	top: 0;
-	width: 0px;
-	transition: .2s;
-	z-index: 2;
-	background-color: #fff;
-	input{
-		width: 100%;
-		&::placeholder{
-			font-size: 14px;
-			color: #c4c4c4;
-		}
-	}
-}
-.search-form-item.active{
-	width: 130px;
-	border-bottom: 1px solid @second;
-}
-/*===========end search block ==========*/
-
 /*======MEDIA FOR HEADER =====*/
 @media(max-width:1199px){
 	.header{

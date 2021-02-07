@@ -40,5 +40,29 @@
 		color: @second;
 	}
 }
-
+/*===========search block ============*/
+.search-form{
+	position: relative;
+}
+.search-form-item{
+	position: absolute;
+	right: 30px;
+	top: 0;
+	width: 0px;
+	transition: .2s;
+	z-index: 2;
+	background-color: #fff;
+	input{
+		width: 100%;
+		&::placeholder{
+			font-size: 14px;
+			color: #c4c4c4;
+		}
+	}
+}
+.search-form-item.active{
+	width: 130px;
+	border-bottom: 1px solid @second;
+}
+/*===========end search block ==========*/
 /******* end header 2*******/ 
