@@ -1,0 +1,65 @@
+/*******ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ HEADER-3*******/ 
+.header.header-3  .header-row +.header-row{
+	margin-top: 24px;
+}
+@media(max-width:1199px){
+	.header-info.header-info-2{display: none;}
+}
+@media(max-width:767px){
+	.header.header-3  .header-content{height: 56px;}
+	.header.header-3 .header-logo img{height: 40px;}
+	.header.header-3  .tablet-user-icons{display: block;}
+	.header-row .contacts-phone{display: none;}
+	.header.header-3 .menu-toggle {
+		margin-left: 20px;
+	}
+}
+
+.header-info-2{
+	display: flex;
+	.header-info__item{
+		display: flex;
+		p+p{
+			margin-left: 5px;
+		}
+	}
+	.header-info__item.item-place{
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.5;
+		p +p {
+			color: @accent;
+		}
+	}
+	.header-info__item.item-time{
+		font-size: 12px;
+		line-height: 19px;
+		.info-title{font-weight: 700;}
+	}
+	.header-info__column +.header-info__column{
+		margin-left: 80px;
+	}
+	.item-ship {
+		font-weight: 700;
+		margin-right: 5px;
+		font-size: 18px;
+		line-height: 1.5;
+	}
+	.item-shipTime{
+		font-size: 12px;
+		line-height: 19px;
+		color: @second;
+	}
+}
+
+.account-icon .logout-btn{
+	border-radius: 4px;
+	height: 25px;
+	line-height: 24px;
+	border: 1px solid @primary;
+	text-align: center;
+	width: 58px;
+	font-size: 12px;
+}
+	
+/******* end header 3*******/ 
