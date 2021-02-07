@@ -1,0 +1,32 @@
+/*===== ШАПКА ВЕРСИЯ ДЛЯ ЭКРАНОВ 320*/
+.mobile-user-account{
+	display: none;
+}
+@media(max-width:767px){
+	.mobile-user-account{
+		display: flex;
+		padding-left: 15px;
+		padding-right: 15px;
+		height: 60px;
+		background-color: @bodyBg;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 5;
+		.header-contacts{
+			margin-left: 0;
+		}
+		.account-block{height: 60px;}
+		.header-contacts{
+			width: 100%;
+			justify-content: space-between;
+			margin-right: 0;
+		}
+	}
+	.header-nav .header-row .social-icons{display: none;}
+	.menu-toggle {margin-left: 0;}
+		
+	
+}
+/*=====КОНЕЦ  ШАПКА ВЕРСИЯ ДЛЯ ЭКРАНОВ 320*/
