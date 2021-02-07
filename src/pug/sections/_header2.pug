@@ -1,42 +1,18 @@
-//=====MOBILE MENU =====
-.mobile-menu#mobile-menu
-	.mobile-menu-top 
-		.mobile-menu-logo
-			img(src="img/logo.png", width="100" alt="logo")
-	.mobile-menu-list
-		ul 
-			li.active
-				a(href="#") Главная
-			li.nav-submenu
-				a(href="#!") Главная
-				ul.submenu-list 
-					li 
-						a(href="#!") Подменю
-					li 
-						a(href="#!") Подменю
-					li 
-						a(href="#!") Подменю
-					li 
-						a(href="#!") Подменю
-			li 
-				a(href="#") Главная
-			li 
-				a(href="#") Главная
-			li 
-				a(href="#") Главная
-			li 
-				a(href="#") Главная
-			li 
-				a(href="#") Главная
-			li 
-				a(href="#") Главная
-			li 
-				a(href="#") Главная
-			li 
-				a(href="#") Главная
-//=====END MOBILE MENU =====
+include _mobile-menu.pug
+include _mobile-header-vers-2.pug
 
 header.header.header-2
+	//===== БЛОК ПОИСКА
+	.header-search#header-search
+		.container
+			form.search-form
+				.search-form-item
+					input(type="text" name="search" placeholder="Введите слово для поиска")
+				.search-form-btn
+					button.header-search-btn
+						+search
+					button.close-search-form
+						+times
 	.container 
 		.header-content
 			.header-logo
@@ -57,20 +33,15 @@ header.header.header-2
 								p 40 минут
 							.header-info__item.item-shipTime
 								p Среднее время доставки
-					.header-contacts
+					.header-contacts.contacts-mobile-reverse
 						+social-icons
 						.contacts-phone
 							a(href="#!") +7(927) 777-77-77
 					//===== БЛОК С ИКОНКАМИ ДЛЯ Планшетов =====
 					.tablet-user-icons
 						.account-block
-							//===== БЛОК ПОИСКА
-							.account-icon.search-block
-								form.search-form
-									.search-form-item.header-search-input  
-										input(type="text" name="search" placeholder="Поиск")
-									button.header-search-btn
-										+search
+							.account-icon.search-block-icon
+								+search
 							//===== Иконка, если НЕ залогинен
 							.account-icon
 								.logout-btn
@@ -115,13 +86,9 @@ header.header.header-2
 					//===== БЛОК С ИКОНКАМИ ДЛЯ ДЕСКТОПА =====
 					.desktop-user-icons
 						.account-block
-							//===== БЛОК ПОИСКА =====
-							.account-icon.search-block
-								form.search-form
-									.search-form-item.header-search-input 
-										input(type="text" name="search" placeholder="Поиск") 
-									button.header-search-btn
-										+search
+							
+							.account-icon.search-block-icon
+								+search
 							.account-icon
 								.logout-btn
 									+logout

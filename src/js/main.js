@@ -23,28 +23,30 @@ $(document).ready(function() {
 			window.addEventListener('resize', function () {
 				item.classList.remove('active');
 				bodyEl.classList.remove('noscroll');
-				// fixMenu.classList.remove('active');
+				mobMenu.classList.remove('active');
 			});
 		}
 	}
 	/*====== Показать строку поиска в шапке======*/
 	
-	const searchBtn = document.getElementsByClassName('header-search-btn');
-
+	const searchBtn = document.getElementsByClassName('search-block-icon');
+	const closeSearchBtn = document.querySelector('.close-search-form');
+	const searhForm = document.getElementById('header-search');
 	if(searchBtn){
 		for(let item of searchBtn){
 			item.addEventListener('click', function(){
-				const searhForm = item.closest('.search-form');
-				const searchInput = searhForm.querySelector('.header-search-input');
 				
-				if(searchInput.classList.contains('active')){
-					searchInput.classList.remove('active');
+				
+				if(searhForm.classList.contains('active')){
+					searhForm.classList.remove('active');
 				}else{
-					searchInput.classList.add('active');
+					searhForm.classList.add('active');
 				}
 			});
 		}
-
+		closeSearchBtn.addEventListener('click', function(){
+			searhForm.classList.remove('active');
+		});
 	}
 
 	/*====== Зафиксировать часть шапки по скроллу ======*/
