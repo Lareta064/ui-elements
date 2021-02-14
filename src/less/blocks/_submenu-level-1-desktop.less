@@ -1,0 +1,25 @@
+
+/******submenu LEVEL-1******/
+ul.header-menu .submenu-list {
+	position: absolute;
+	left: -10px;
+	bottom: 0;
+	transform: translateY(100%);
+	background-color: #fff;
+	padding: 10px;
+	z-index: 3;
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s;
+	li{
+		font-weight: 400;
+		
+	}
+	li+li{
+		margin-top: 5px;
+	}
+}
+ul.header-menu .nav-submenu:hover .submenu-list{
+	visibility: visible;
+	opacity: 1;
+}

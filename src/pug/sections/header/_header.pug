@@ -1,0 +1,50 @@
+include ../mobile-menu/_mobile-menu-1
+include ../mobile-fixed-nav/_mobile-fixed-bottom
+header.header.header-1
+	.container 
+		.header-content
+			.header-logo
+				img(src="img/logo.png",  alt="logo")
+			.header-nav 
+				.header-row
+					// тестовый блок вариант 1
+					.header-info.header-info-1
+						p.info-title прием заказов:
+						p.info-text СР, ЧТ, ВС с 15:00 - 00:00; ПТ, СБ с 15:00 - 02:00; ПН, ВТ - выходные дни
+					.header-contacts
+						+social-icons
+						.contacts-phone
+							a(href="#!") +7(927) 777-77-77
+					.tablet-user-icons
+						.account-block
+							.account-icon
+								.logout-btn
+									+logout
+							.account-icon
+								.login-btn
+									.user-avatar
+										span
+										a(href="#" style="background-image: url(img/avatar.jpg) ")
+							.account-icon
+								.user-basket
+									+cart-icon
+									span.basket-value 2
+							.menu-toggle
+								span
+				.header-row
+					include ../desktop-menu/_desktop-menu-1
+					.desktop-user-icons
+						.account-block
+							.account-icon
+								.logout-btn
+									+logout
+							.account-icon
+								.login-btn
+									.user-avatar
+										span
+										a(href="#" style="background-image: url(img/avatar.jpg) ")
+							.account-icon
+								.user-basket
+									+cart-icon
+									span.basket-value 2
+							
