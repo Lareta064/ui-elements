@@ -27,34 +27,13 @@ $(document).ready(function() {
 			});
 		}
 	}
-	/*====== Показать строку поиска в шапке======*/
 	
-	const searchBtn = document.getElementsByClassName('search-block-icon');
-	const closeSearchBtn = document.querySelector('.close-search-form');
-	const searhForm = document.getElementById('header-search');
-	if(searchBtn){
-		for(let item of searchBtn){
-			item.addEventListener('click', function(){
-				
-				
-				if(searhForm.classList.contains('active')){
-					searhForm.classList.remove('active');
-				}else{
-					searhForm.classList.add('active');
-				}
-			});
-		}
-		closeSearchBtn.addEventListener('click', function(){
-			searhForm.classList.remove('active');
-		});
-	}
-
 	/*====== Зафиксировать часть шапки по скроллу ======*/
 	const headerTop = document.querySelector('header.header');
 
 	window.addEventListener('scroll', function(){
         if(this.innerWidth > 1199){
-            if(this.pageYOffset > 10){
+            if(this.pageYOffset > 200){
                 headerTop.classList.add('header-slim');
             }
             else{
