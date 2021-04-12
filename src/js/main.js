@@ -48,15 +48,15 @@ $(document).ready(function() {
 	}
 
 	/*====== Зафиксировать часть шапки по скроллу ======*/
-	const headerTop = document.querySelector('header.header');
+	const headerTop = document.querySelector('.header-slim');
 
 	window.addEventListener('scroll', function(){
         if(this.innerWidth > 1199){
-            if(this.pageYOffset > 10){
-                headerTop.classList.add('header-slim');
+            if(this.pageYOffset > 140){
+                headerTop.classList.add('.header-slim--visible');
             }
             else{
-                headerTop.classList.remove('header-slim');
+                headerTop.classList.remove('.header-slim--visible');
             }
         }
     });

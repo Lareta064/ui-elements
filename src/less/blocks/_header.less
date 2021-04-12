@@ -10,15 +10,16 @@
 	} 
 }
 
-header.header.header-slim{
-	position: sticky;
-	top: 0; 
-	// left: 0;
-	// right: 0;
+.header.header-slim{
+	position: fixed;
+	top: -110%; 
+	left: 0;
+	right: 0;
 	z-index: 5;
 	height: 70px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	transition: .3s;
 	.header-row:first-child{
 		height: 0;
 		overflow: hidden;
@@ -34,6 +35,9 @@ header.header.header-slim{
 		img{height: 60px;}
 		
 	}
+}
+.header.header-slim.header-slim--visible{
+	top: 0;
 }
 .header-content{
 	display: flex;

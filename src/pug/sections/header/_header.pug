@@ -1,5 +1,26 @@
 include ../mobile-menu/_mobile-menu-1
 include ../mobile-fixed-nav/_mobile-fixed-bottom
+.header.header-slim
+	.container 
+		.header-content
+			.header-logo
+				img(src="img/logo.png",  alt="logo")
+			.header-nav
+				include ../desktop-menu/_desktop-menu-1
+			.desktop-user-icons
+				.account-block
+					.account-icon
+						.logout-btn
+							+logout
+					.account-icon
+						.login-btn
+							.user-avatar
+								span
+								a(href="#" style="background-image: url(img/avatar.jpg) ")
+					.account-icon
+						.user-basket
+							+cart-icon
+							span.basket-value 2
 header.header.header-1
 	.container 
 		.header-content
